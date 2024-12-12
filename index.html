@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scott's Cash - App Reviews</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Scott's Cash</h1>
+        <button id="requestReview" onclick="openRequestForm()">Request App Review</button>
+    </header>
 
+    <section id="requestForm" class="hidden">
+        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+            <label for="appName">App Name:</label>
+            <input type="text" id="appName" name="appName" required><br><br>
+            <label for="appDetails">App Details:</label><br>
+            <textarea id="appDetails" name="appDetails" rows="4" required></textarea><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <main>
+        <div class="category">
+            <h2>Featured</h2>
+            <select id="sortFeatured">
+                <option value="activity">Activity Level</option>
+                <option value="alphabetical">Alphabetical</option>
+            </select>
+            <div id="featuredApps" class="app-list"></div>
+        </div>
+
+        <div class="category">
+            <h2>Cash App (Games)</h2>
+            <select id="sortGames">
+                <option value="activity">Activity Level</option>
+                <option value="alphabetical">Alphabetical</option>
+            </select>
+            <div id="gameApps" class="app-list"></div>
+        </div>
+
+        <div class="category">
+            <h2>Cash App (Crypto)</h2>
+            <select id="sortCrypto">
+                <option value="activity">Activity Level</option>
+                <option value="alphabetical">Alphabetical</option>
+            </select>
+            <div id="cryptoApps" class="app-list"></div>
+        </div>
+
+        <div class="category">
+            <h2>Games</h2>
+            <select id="sortAllGames">
+                <option value="activity">Activity Level</option>
+                <option value="alphabetical">Alphabetical</option>
+            </select>
+            <div id="allGamesApps" class="app-list"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
